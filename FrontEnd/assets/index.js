@@ -116,11 +116,11 @@ if (token !== null) {
   //si il est connecter
   banner.style.display = "flex"; // affiche banner
   modifyBtn.style.display = "flex"; // affiche modify-item
+  filters.style.display = "none"; // masque les boutons
   //si il n'est pas connecter
 } else {
   banner.style.display = "none"; // affiche pas  banner
   modifyBtn.style.display = "none"; // affiche pas modifier
-  filters.style.display = "none"; // masque les boutons
 
 }
 
