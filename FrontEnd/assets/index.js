@@ -29,7 +29,7 @@ async function displayworks() {
     createworks(work)
   });
 }
-displayworks();
+//displayworks();
 
 //  Récupéreration des categories
 async function getcategories() {
@@ -66,7 +66,8 @@ async function filterworks() {
         btnworks.forEach ((work) => {
           createworks(work)
        });
-        //displayworks();
+      }else {
+        displayworks();
       }
     });
   });
