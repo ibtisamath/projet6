@@ -31,7 +31,7 @@ async function displayworks() {
 }
 displayworks();
 
-//  Récupéreration des categories
+// Récupéreration des categories
 async function getcategories() {
   const response = await fetch("http://localhost:5678/api/categories");
   return await response.json();
