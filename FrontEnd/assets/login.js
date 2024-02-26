@@ -25,12 +25,11 @@ function getusers ()  {
       }
       return response.json();
     })
-
     .then((data) => {
       localStorage.setItem("token", data.token);
     })
     .catch((error) => {
-      console.error('Erreur inattendue lors de la connexion:', error.message);
+      console.error('Erreur inattendue lors de la connexion:', error);
 
     });
 });

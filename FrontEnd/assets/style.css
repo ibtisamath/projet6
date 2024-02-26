@@ -217,6 +217,7 @@ input[type="submit"]{
 
 }
 
+
 .filters button {
 	font-family: 'Syne';
 	background-color: white;
@@ -256,11 +257,12 @@ footer nav ul {
 }
 
 .modify  {
-	margin-top: 80px;
+	margin-top: 100px;
 }
 
 #button-modifier{
 	display: inline-flex; 
+	display: none;
 	align-items: center;
 	justify-content:center ;
 	cursor: pointer;

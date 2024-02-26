@@ -96,7 +96,7 @@ if ( token !== null)  {
   window.location.href = "assets/login.html";
   })
 }
-  
+   
 //banner
 const banner = document.querySelector(".banner"); //div banner (élement parent)
 const textBanner = document.createElement("p"); //création du paragraphe de banner
@@ -118,8 +118,10 @@ if (token !== null) {
   modifyBtn.style.display = "flex"; // affiche modify-item
   //si il n'est pas connecter
 } else {
-  banner.style.display = "none"; // affiche pas banner
-  modifyBtn.style.display = "none"; // affiche pas modify-item
+  banner.style.display = "none"; // affiche pas  banner
+  modifyBtn.style.display = "none"; // affiche pas modifier
+  filters.style.display = "none"; // masque les boutons
+
 }
 
 // récupération de éléments du Dom pour la gestion des modales
