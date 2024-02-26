@@ -1,6 +1,6 @@
 // Récupération des éléments du DOM
 const gallery = document.querySelector(".gallery")
-const filters = document.querySelector(".filters")
+//const filters = document.querySelector(".filters")
 
 
 //  Récupéreration des travaux
@@ -57,18 +57,18 @@ async function filterworks() {
   const buttons = document.querySelectorAll(".filters button");
   buttons.forEach((button) => {
     button.addEventListener ("click", async (e) => {
-      btnId = e.target.id;
+      button = e.target.id;
       gallery.innerHTML = ""; // Vide la galerie avant de l'affiche
-      if (btnId !== "0" ) {
+      if (button !== "0" ) {
         const btnworks = Works.filter((work) => { 
-          return work.categoryId == btnId;
+          return work.categoryId == button;
         });
         btnworks.forEach ((work) => {
           createworks(work)
        });
-      } else {
+      }else {
         displayworks();
-      };
+      }
     });
   });
 }
@@ -77,9 +77,7 @@ filterworks();
 
 //Modification de la page en fonction de l'état de connexion de l'utilsateur
 
-const header = document.querySelector("header");
-const ul = document.querySelector("header ul ");
-const li = document.querySelectorAll(" ul li");
+const li = document.querySelectorAll(" ul li"); // récupération des li
 const login = li[2];
 login.classList = "login"
 const lilogin = document.querySelector(".login")
@@ -138,7 +136,6 @@ const iSecondModal = document.querySelectorAll(".modale-secondaire i"); //premi�
 const arrow = iSecondModal[0]
 const xmarkTwo = iSecondModal[2]; // croix de la seconde modale
 // champs message du formulaire
-const erreurChampVide = document.getElementById("error-messageChamp");
 const addProject = document.getElementById("addProject");
 const errorSizeImg = document.getElementById("message-erreur-taille-image");
 
@@ -159,13 +156,13 @@ function xFirstModale() {
 
 //fermeture de la modale en cliquant à l'extérieur de la modale
 closeModale.addEventListener("click", CloseModale); //au click ferme la modale
-function CloseModale (e) { 
+function CloseModale () { 
   modalWrapper.style.display = "none"; //retire modale
 }
 
 //xmark de la seconde modale fermant la modale
 xmarkTwo.addEventListener("click", xSecondModale); //au click ferme la modale
-function xSecondModale(e) {
+function xSecondModale() {
   modalWrapper.style.display = "none"; //retire modale
 }
 
@@ -302,10 +299,9 @@ function categoriesForm () {
     console.error(error);
   });
     
-};
+}
 
 categoriesForm()
-
 
 //fonction add work pour l'ajout des travaux
 function addWork() {
