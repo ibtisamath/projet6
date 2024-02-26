@@ -29,6 +29,9 @@ function getusers ()  {
     .then((data) => {
       localStorage.setItem("token", data.token);
     })
+    .catch((error) => {
+      console.error(error);
+    });
 });
 }
 getusers()
