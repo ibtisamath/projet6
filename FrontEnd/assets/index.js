@@ -117,6 +117,8 @@ if (token !== null) {
   banner.style.display = "flex"; // affiche banner
   modifyBtn.style.display = "flex"; // affiche modify-item
   filters.style.display = "none"; // masque les boutons
+  filters.style.marginTop = "30px"; // masque les boutons
+
   //si il n'est pas connecter
 } else {
   banner.style.display = "none"; // affiche pas  banner
