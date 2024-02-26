@@ -1,6 +1,6 @@
 // Récupération des éléments du DOM
 const gallery = document.querySelector(".gallery")
-const filters = document.querySelector(".filters")
+//const filters = document.querySelector(".filters")
 
 
 //  Récupéreration des travaux
@@ -57,11 +57,11 @@ async function filterworks() {
   const buttons = document.querySelectorAll(".filters button");
   buttons.forEach((button) => {
     button.addEventListener ("click", async (e) => {
-      btnId = e.target.id;
+      button = e.target.id;
       gallery.innerHTML = ""; // Vide la galerie avant de l'affiche
-      if (btnId !== "0" ) {
+      if (button !== "0" ) {
         const btnworks = Works.filter((work) => { 
-          return work.categoryId == btnId;
+          return work.categoryId == button;
         });
         btnworks.forEach ((work) => {
           createworks(work)
