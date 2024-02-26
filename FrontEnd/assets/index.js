@@ -67,7 +67,7 @@ async function filterworks() {
           createworks(work)
        });
         displayworks();
-      };
+      }
     });
   });
 }
@@ -298,7 +298,7 @@ function categoriesForm () {
     console.error(error);
   });
     
-};
+}
 
 categoriesForm()
 
