@@ -63,9 +63,9 @@ async function filterworks() {
         const btnworks = Works.filter((work) => { 
           return work.categoryId == button;
         });
-        btnworks.forEach ((work) => {
-          createworks(work)
-       });
+        ///btnworks.forEach ((work) => {
+          //createworks(work)
+       //});
         displayworks();
       }
     });
