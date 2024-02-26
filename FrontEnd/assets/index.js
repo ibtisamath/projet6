@@ -1,6 +1,6 @@
 // Récupération des éléments du DOM
 const gallery = document.querySelector(".gallery")
-//const filters = document.querySelector(".filters")
+const filters = document.querySelector(".filters")
 
 
 //  Récupéreration des travaux
