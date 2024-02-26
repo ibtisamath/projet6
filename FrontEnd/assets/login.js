@@ -30,7 +30,8 @@ function getusers ()  {
       localStorage.setItem("token", data.token);
     })
     .catch((error) => {
-      console.error(error);
+      console.error('Erreur inattendue lors de la connexion:', error.message);
+
     });
 });
 }
