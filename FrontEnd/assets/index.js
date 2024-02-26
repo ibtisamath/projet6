@@ -29,7 +29,7 @@ async function displayworks() {
     createworks(work)
   });
 }
-//displayworks();
+displayworks();
 
 //  Récupéreration des categories
 async function getcategories() {
