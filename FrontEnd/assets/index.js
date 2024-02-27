@@ -61,7 +61,7 @@ async function filterworks() {
       gallery.innerHTML = ""; // Vide la galerie avant de l'affiche
       if (button !== "0" ) {
         const btnworks = Works.filter((work) => { 
-          return work.categoryId == button;
+          return work.categoryId === button;
         });
         btnworks.forEach ((work) => {
           createworks(work)
