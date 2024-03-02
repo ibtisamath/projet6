@@ -1,6 +1,6 @@
 // Récupération des éléments du DOM
 const gallery = document.querySelector(".gallery")
-//const filters = document.querySelector(".filters")
+const filters = document.querySelector(".filters")
 
 
 //  Récupéreration des travaux
@@ -8,7 +8,6 @@ async function getworks() {
   const response = await fetch("http://localhost:5678/api/works");
   return await response.json();
 }
-getworks();
 
 function createworks(work) {
   //création des balises 
@@ -31,12 +30,11 @@ async function displayworks() {
 }
 displayworks();
 
-//  Récupéreration des categories
+// Récupéreration des categories
 async function getcategories() {
   const response = await fetch("http://localhost:5678/api/categories");
   return await response.json();
 }
-getcategories();
 
 //  affrichage des categories
 async function displaycategories() {
@@ -96,7 +94,7 @@ if ( token !== null)  {
   window.location.href = "assets/login.html";
   })
 }
-  
+   
 //banner
 const banner = document.querySelector(".banner"); //div banner (élement parent)
 const textBanner = document.createElement("p"); //création du paragraphe de banner
@@ -116,10 +114,13 @@ if (token !== null) {
   //si il est connecter
   banner.style.display = "flex"; // affiche banner
   modifyBtn.style.display = "flex"; // affiche modify-item
+  filters.style.display = "none"; // masque les boutons
+
   //si il n'est pas connecter
 } else {
-  banner.style.display = "none"; // affiche pas banner
-  modifyBtn.style.display = "none"; // affiche pas modify-item
+  banner.style.display = "none"; // affiche pas  banner
+  modifyBtn.style.display = "none"; // affiche pas modifier
+
 }
 
 // récupération de éléments du Dom pour la gestion des modales
