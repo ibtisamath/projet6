@@ -8,7 +8,6 @@ async function getworks() {
   const response = await fetch("http://localhost:5678/api/works");
   return await response.json();
 }
-getworks();
 
 function createworks(work) {
   //création des balises 
@@ -36,7 +35,6 @@ async function getcategories() {
   const response = await fetch("http://localhost:5678/api/categories");
   return await response.json();
 }
-getcategories();
 
 //  affrichage des categories
 async function displaycategories() {
